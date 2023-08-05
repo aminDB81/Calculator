@@ -33,3 +33,9 @@ const calculate = (btnValue) => {
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => calculate(e.target.dataset.value))
 });
+
+
+// dark mod
+const body = querySelector("body");
+const btn = querySelector(".btn");
+

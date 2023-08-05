@@ -12,6 +12,7 @@ body {
   background-color: #dff9fb;
 }
 .container {
+  margin-top: 10rem;
   position: relative;
   max-width: 300px;
   width: 100%;
@@ -50,4 +51,37 @@ body {
 }
 .operator {
   color: #3742fa;
+}
+.btn {
+  background-color: #ffff;
+  width: 4em;
+  height: 1.8em;
+  position: absolute;
+  margin-top: -20rem;
+  border-radius: 10em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.05),
+    inset 0 8px 8px rgba(0, 0, 0, 0.05), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn_indicator{
+  background-color: #ffff;
+  width: 1.9em;
+  height: 1.8em;
+  border-radius: 50%;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+.btn_icon-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_icon{
+  color: #fff200;
+  font-size: 22px
 }
