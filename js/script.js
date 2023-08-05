@@ -34,8 +34,26 @@ buttons.forEach((button) => {
     button.addEventListener("click", (e) => calculate(e.target.dataset.value))
 });
 
+// dark mode
+const body = document.querySelector("body");
+const btn = document.querySelector(".btn");
+const icon = document.querySelector(".btn_icon");
+const calculator = document.querySelector(".container");
+btn.addEventListener("click", () => {
+    body.classList.toggle("darkmode");
+    icon.classList.add("animated")
 
-// dark mod
-const body = querySelector("body");
-const btn = querySelector(".btn");
-
+    if (body.classList.contains("darkmode")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        calculator.style.backgroundColor = "#7f8c8d";
+        
+    }else{
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        calculator.style.backgroundColor = "#ffff";
+    }
+    setTimeout(()=>{
+        icon.classList.remove("animated")
+    },200)
+});

@@ -10,15 +10,16 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #dff9fb;
+  transition: all 0.5s
 }
 .container {
-  margin-top: 10rem;
   position: relative;
   max-width: 300px;
   width: 100%;
   border-radius: 15px;
   padding: 10px 20px 20px;
-  background: #ffff;
+  background-color: #ffff;
+  transition: all 0.5s;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .display {
@@ -32,6 +33,7 @@ body {
   pointer-events: none;
   word-spacing: 25px;
   letter-spacing: 3px;
+  border-radius: 15px;
 }
 .buttons {
   display: grid;
@@ -54,10 +56,10 @@ body {
 }
 .btn {
   background-color: #ffff;
-  width: 4em;
+  width: 3.5em;
   height: 1.8em;
   position: absolute;
-  margin-top: -20rem;
+  margin-top: -30rem;
   border-radius: 10em;
   display: flex;
   align-items: center;
@@ -72,6 +74,7 @@ body {
   height: 1.8em;
   border-radius: 50%;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 .btn_icon-container {
   width: 100%;
@@ -83,5 +86,25 @@ body {
 
 .btn_icon{
   color: #fff200;
-  font-size: 22px
+  font-size: 18px
+}
+.darkmode .btn_indicator {
+  transform: translateX(1.75em)
+}
+body.darkmode {
+  background-color: #3d3d3d;
+}
+.darkmode .btn_indicator {
+  background-color: #4b4b4b;
+}
+.darkmode .btn_icon {
+  color: #ecf0f1;
+}
+.btn_icon.animated {
+  animation: spin 0.5s;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
