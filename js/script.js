@@ -46,7 +46,7 @@ btn.addEventListener("click", () => {
     if (body.classList.contains("darkmode")) {
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
-        calculator.style.backgroundColor = "#7f8c8d";
+        calculator.style.backgroundColor = "#dfe6e9";
         
     }else{
         icon.classList.remove("fa-moon");
